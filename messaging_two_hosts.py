@@ -23,7 +23,7 @@ class MainWindow():
     def create_viewer_text(self):
 
         self.viewer_text = tk.Text(self.win, wrap="word", width=60, height=18)
-        file_path= "C:\\Users\\Joel\\Documents\\Python\\messaging_hosts\\logs_messages.txt"
+        file_path= "X:\\test_messaging\\logs_messages.txt"
         content = open(file_path, 'r')
         self.viewer_text.insert(tk.END, content.read())
         self.viewer_text.pack()
@@ -47,7 +47,7 @@ class MainWindow():
         message=self.message.get()
         print(message)
         message_sent= message+"\n"
-        textfile= open("C:\\Users\\Joel\\Documents\\Python\\messaging_hosts\\logs_messages.txt", "a") 
+        textfile= open("X:\\test_messaging\\logs_messages.txt", "a") 
         textfile.write(message_sent)
         textfile.close()
         self.message.delete(0, END)
