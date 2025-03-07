@@ -28,7 +28,6 @@ class MainWindow():
         self.viewer_text.insert(tk.END, content.read())
         self.viewer_text.pack()
         
-
     def create_inbox_message(self):
         
         frame=LabelFrame(self.win, text="Tu mensaje va aquí")
@@ -40,8 +39,6 @@ class MainWindow():
         send_button= Button(frame, text= "Enviar", command=self.getting_text_inbox_message) 
         send_button.grid(row= 0, column= 3, padx = 5, pady = 10)
         
-
-    
     def getting_text_inbox_message(self):
         
         message=self.message.get()
@@ -52,15 +49,17 @@ class MainWindow():
         textfile.close()
         self.message.delete(0, END)
         self.viewer_text.destroy()
-        main_window.create_viewer_text()
-        
-        
+        #self.main_window.create_viewer_text()        
     
     def show(self):
         self.win.mainloop()
 
-main_window = MainWindow()
-main_window.create_greeting("Iniciaste un chat con ... por favor saluda")
-main_window.create_inbox_message()
-main_window.create_viewer_text()
-main_window.show()
+
+
+#main_window = MainWindow()
+#main_window.create_greeting("Iniciaste un chat con ... por favor saluda")
+#main_window.create_inbox_message()
+#main_window.create_viewer_text()
+#main_window.show()
+
+
