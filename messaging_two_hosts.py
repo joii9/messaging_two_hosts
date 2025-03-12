@@ -49,7 +49,7 @@ class MainWindow():
         textfile.close()
         self.message.delete(0, END)
         self.viewer_text.destroy()
-        #self.main_window.create_viewer_text()        
+        self.create_viewer_text()        
     
     def show(self):
         self.win.mainloop()
